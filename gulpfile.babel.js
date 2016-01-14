@@ -110,8 +110,14 @@ gulp.task('scripts', () =>
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
-      './app/scripts/main.js'
-      // Other scripts
+      './app/scripts/main.js',
+      './app/scripts/jquery.js',
+      './app/scripts/bootstrap.js',
+      './app/scripts/classie.js',
+      './app/scripts/cbpAnimatedHeader.js',
+      './app/scripts/jqBootstrapValidation.js',
+      './app/scripts/contact_me.js',
+      './app/scripts/javascript.js'
     ])
       .pipe($.newer('.tmp/scripts'))
       .pipe($.sourcemaps.init())
